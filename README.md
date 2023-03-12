@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
+## Description
+NB-ALL est une application qui fournit des statistiques de la NBA pour les fans de basketball. Les utilisateurs peuvent accéder à des informations en temps réel sur les équipes et les joueurs de la NBA, telles que les scores, les classements, les statistiques individuelles, les calendriers des matchs et plus encore. L'application utilise Firebase pour l'authentification des utilisateurs et Firestore pour stocker les préférences des utilisateurs, telles que leurs équipes et joueurs préférés. Avec NBALL, les utilisateurs peuvent personnaliser leur expérience de basket-ball en suivant leurs équipes et joueurs préférés et en explorant des statistiques approfondies pour améliorer leur compréhension du jeu. L'interface conviviale et intuitive de l'application rend la recherche d'informations sur la NBA facile et amusante pour les utilisateurs de tous niveaux.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
