@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nb-all": {
+      "hosting": {
+        "NBA-ALL": [
+          "nb-all"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nb-all"
+  }
+}
