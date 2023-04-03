@@ -12,11 +12,14 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(
-    public authService: AuthService
+    public authService: AuthService,
+    public router: Router
   ) { }
 
   
   ngOnInit(): void {
   }
-
+  redirectToLogin() {
+    this.router.navigate(['/login']);
+  }
 }

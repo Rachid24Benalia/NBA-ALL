@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<h2> Your Favorite Teams:</h2>
+<mat-grid-list cols="3" rowHeight="350px" gutterSize="20px" style="margin:20px">
+    <mat-grid-tile *ngFor="let team of savedTeams">
+      <mat-card [routerLink]="['/teams', team.id]">
+        <img mat-card-image src="{{team.logo}}" alt="{{ team.name }}" style="height:200px">
+        <mat-card-header>
+          <mat-card-title style="text-align: center;">{{ team.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-raised-button color="warn" (click)="remove(team)" >Remove from Favorites</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+       

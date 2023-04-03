@@ -1,0 +1,222 @@
+/* basketball-team-details.component.css */
+.team-details-card {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .team-stats-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .team-stats-list li {
+    margin-bottom: 10px;
+  }
+  
+  .team-roster-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .team-roster-table th,
+  .team-roster-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .team-roster-table th {
+    background-color: #eee;
+    font-weight: bold;
+  }
+  
+  .team-roster-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .team-roster-table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+  }
+  
+  .team-roster-table tr:hover td {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  .mat-card.team-players {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mat-card.team-players h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .mat-card.team-players table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .mat-card.team-players th,
+  .mat-card.team-players td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .mat-card.team-players th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .team-players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .team-logo {
+    width: 10px;
+    height: 200px;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 35vh; 
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 20vh; /* pour limiter la hauteur de l'image */
+    object-fit: contain; /* pour éviter que l'image ne soit déformée */
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .content-info {
+    background: #f9f9f9;
+    padding: 40px 0;
+    background-size: cover!important;
+    background-position: top center!important;
+    background-repeat: no-repeat!important;
+    position: relative;
+   padding-bottom:100px;    
+    
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dedede;
+}
+
+table thead tr th {
+    padding: 20px;
+    border: 1px solid #dedede;
+    color: #000;
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background: #f9f9f9;
+}
+
+table.result-point tr td.number {
+    width: 100px;
+    position: relative;
+} 
+
+.text-left {
+    text-align: left!important;
+}
+
+table tr td {
+    padding: 10px 20px;
+    border: 1px solid #dedede;
+}
+table.result-point tr td .fa.fa-caret-up {
+    color: green;
+}
+
+table.result-point tr td .fa {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+table tr td {
+    padding: 10px 40px;
+    border: 1px solid #dedede;
+}
+
+table tr td img {
+    max-width: 32px;
+    float: left;
+    margin-right: 11px;
+    margin-top: 1px;
+    border: 1px solid #dedede;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+  }
+
+  .btn-secondary {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  .btn-secondary:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-space {
+    margin-right: 10px;
+  }

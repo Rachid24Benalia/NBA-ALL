@@ -2,11 +2,17 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { FirebaseError } from '@firebase/util';
+import jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+
+  private token:any;
+
+
+
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router // Inject Firebase auth service
@@ -43,6 +49,10 @@ async signUp(email: string, password: string): Promise<void> {
               this.afAuth.signOut().then(() => {
                 this.router.navigate(['/login']);
               });
+            }else{
+              const token =  user.getIdToken().then(e=>{
+                localStorage.setItem('id_token', e);
+              });
             }
             this.router.navigate(['']);
           }
@@ -52,6 +62,19 @@ async signUp(email: string, password: string): Promise<void> {
         window.alert(error.message);
       });
   }
+  getUserId(){
+    this.loadTokenFromLocalStorge()
+    const decodedToken :DecodedToken = jwt_decode(this.token);
+    const userId = decodedToken.sub;
+    return userId
+  }
+  loadTokenFromLocalStorge() : void {
+    this.token = localStorage.getItem('id_token');
+  }
   
-  
+}
+interface DecodedToken {
+  sub: string;
+  email: string;
+  // Add other properties as needed
 }

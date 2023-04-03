@@ -1,0 +1,16 @@
+<p>teams-per-conference works!</p>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<div class="example-container">
+    <mat-grid-list cols="4" rowHeight="300px" gutterSize="10px">
+      <mat-grid-tile *ngFor="let team of teams" [colspan]="1" [rowspan]="1">
+        <div class="tile-content">
+          <img [src]="team.logo" alt="{{ team.name }} logo" class="team-logo" />
+          <div class="team-info">
+            <div class="team-name">{{team.name}}</div>
+            <div class="team-conference">{{ team.leagues.standard.conference }}</div>
+            <div class="team-division">{{ team.leagues.standard.division }}</div>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

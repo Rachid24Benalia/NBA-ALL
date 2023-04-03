@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<h2>Your Favorite Players</h2>
+<mat-grid-list cols="3" rowHeight="350px" gutterSize="20px" style="margin:20px">
+    <mat-grid-tile *ngFor="let player of savedPlayers">
+      <mat-card>
+        <img mat-card-image src="../../../../assets/images/player.png" alt="{{ player.firstname }}" style="height:200px">
+        <mat-card-header>
+          <mat-card-title style="text-align: center;">{{ player.firstname }} {{ player.lastname }}  </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-raised-button color="warn" (click)="remove(player)" >Remove from Favorites</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+       

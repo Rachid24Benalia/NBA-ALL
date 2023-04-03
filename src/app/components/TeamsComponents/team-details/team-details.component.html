@@ -1,0 +1,68 @@
+<!-- basketball-team-details.component.html -->
+<app-navbar></app-navbar>
+<mat-card *ngFor="let t of team" class="team-details-card">
+    <img mat-card-image src="{{t.logo}}" alt="Team Logo" >
+    <mat-card-content>
+      <h2 mat-card-title style="text-align: center;">{{t.name}}</h2>
+      <p mat-card-subtitle >Team Statistics:</p>
+      <ul *ngFor="let s of stats"  class="team-stats-list">
+        <li>games: {{s.games}}</li>
+        <li>Assists: {{s.assists}}</li>
+        <li>Blocks: {{s.blocks}}</li>
+        <li>FastBreakPoints: {{s.fastBreakPoints}}</li>
+        <li>Longest Run: {{s.longestRun}}</li>
+        <li>Total Rebounds: {{s.totReb}}</li>
+        <li>Turnovers: {{s.turnovers}}</li>
+
+
+        <!-- Add other statistics as needed -->
+      </ul>
+      <button mat-raised-button color="primary" (click)="saveTeam(t)" >Add to Favorites</button>
+    </mat-card-content>
+  </mat-card>
+  <div *ngFor="let t of team">
+  <h2 style="text-align: center;"> {{t.name}}'s Players</h2>
+
+  </div>
+
+<section class="content-info" style="background-color: transparent; padding: 0;" >
+    <div class="container paddings-mini">
+       <div class="row">
+          <div class="col-lg-12">
+             <table class="table-striped table-responsive table-hover result-point">
+                <thead class="point-table-head">
+                   <tr>
+                      <th class="text-left">First Name</th>
+                      <th class="text-left">Last Name</th>
+                      <th class="text-center">Birth Date</th>
+                     
+                      <th class="text-center">Country</th>
+                      <th class="text-center">College</th>
+                      <th class="text-center">NBA Start</th>
+                      <th class="text-center">Jersey</th>
+                      <th  class="text-center">Action</th>
+                   </tr>
+                </thead>
+                <tbody class="text-center">
+                   <tr *ngFor="let p of players " >
+                      <td class="text-left number" [routerLink]="['/players', p.id]">{{p.firstname}}<i class="fa fa-caret-up" aria-hidden="true"></i> </td>
+                      <td class="text-left" [routerLink]="['/players', p.id]"> {{p.lastname}}</td>
+                      <td>{{p.birth.date}}</td>
+                      <td>{{p.birth.country}}</td>
+                      <td>{{p.college}}</td>
+                      <td>{{p.nba.start}}</td>
+                      <td>{{p.leagues.standard.jersey}}</td>
+                      <td>
+                        <button (click)="save(p)" class="btn btn-secondary btn-space">Save</button>
+                      </td>
+                   </tr>
+                   
+                </tbody>
+             </table>
+           
+          </div>
+       </div>
+    </div>
+    
+ </section>
+ 

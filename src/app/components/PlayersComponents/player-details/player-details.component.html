@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<!-- basketball-team-details.component.html -->
+<mat-card *ngFor="let p of player" class="team-details-card">
+    <img mat-card-image src="../../../../assets/images/player.png" alt="Team Logo" width="200px" >
+    <mat-card-content>
+      <h2 mat-card-title >{{p.firstname}} {{p.lastname}}</h2>
+      <p mat-card-subtitle >Player Statistics:</p>
+      <ul *ngFor="let s of player"  class="team-stats-list">
+        <li>birth: {{s.birth.date}} </li>
+        <li>height: {{s.height.meters}} meters </li>
+        <li>weight: {{s.weight.kilograms}} kilograms </li>
+
+        
+        <li>NBA Start: {{s.nba.start}} </li>
+        <li>College: {{s.college}} </li>
+        <li>Affiliation: {{s.affiliation}} </li>
+
+        <li>Position: {{p.leagues.standard.pos}}</li>
+        <li>Jersey: {{s.leagues.standard.jersey}}</li>
+
+
+        <!-- Add other statistics as needed -->
+      </ul>
+      <button mat-raised-button color="primary" (click)="save(p)" >Add to Favorites</button>
+    </mat-card-content>
+  </mat-card>
+  
+
+ 

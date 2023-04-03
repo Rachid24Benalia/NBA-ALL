@@ -1,0 +1,49 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .tile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .team-logo {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .team-info {
+    text-align: center;
+  }
+  
+  .team-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .team-conference {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 3px;
+  }
+  
+  .team-division {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  mat-grid-list {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+  }

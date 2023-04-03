@@ -1,0 +1,13 @@
+<nav class="navbar">
+    <div class="center">
+    <a mat-button [routerLink]="['/teams']" >Standings</a>
+    <a mat-button [routerLink]="['/favplayers']">Players</a>
+    <a mat-button [routerLink]="['/favteams']">Teams</a>
+</div>
+    <span class="spacer"></span>
+    
+    <button mat-icon-button value="Log OUT" (click)="afAuth.logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </nav>
+  

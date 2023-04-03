@@ -1,0 +1,9 @@
+<p>player works!</p>
+<app-players-stats></app-players-stats>
+<ul>
+        <li *ngFor="let p of players ">
+            <div [routerLink]="['/players', p.id]">
+            <p> {{ p.firstname }} {{ p.lastname }} </p>
+    </div>
+
+</ul>

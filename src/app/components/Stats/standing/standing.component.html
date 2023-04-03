@@ -1,0 +1,83 @@
+<br> <br>
+<h1>East Standing Teams</h1>
+<br>
+<section class="content-info">
+    <div class="container paddings-mini">
+       <div class="row">
+          <div class="col-lg-12">
+             <table class="table-striped table-responsive table-hover result-point">
+                <thead class="point-table-head">
+                   <tr>
+                      <th class="text-left">Rank</th>
+                      <th class="text-left">TEAM</th>
+                      <th class="text-center">Conference</th>
+                      <th class="text-center">Win</th>
+                      <th class="text-center">Loss</th>
+                      <th class="text-center">Home win</th>
+                      <th class="text-center">Home loss</th>
+                      <th class="text-center">Away win</th>
+                      <th class="text-center">Away loss</th>
+                      <th class="text-center">Nickname</th>
+                   </tr>
+                </thead>
+                <tbody class="text-center">
+                   <tr *ngFor="let s of standingEast | orderBy:'conference.rank'"  style="cursor: pointer;" >
+                      <td class="text-left number">{{s.conference.rank}}<i class="fa fa-caret-up" aria-hidden="true"></i></td>
+                      <td class="text-left">
+                         <img src={{s.team.logo}} ><span [routerLink]="['/teams', s.team.id]">{{s.team.name}}</span>
+                      </td>
+                      <td>{{s.conference.name}}</td>
+                      <td>{{s.division.win}}</td>
+                      <td>{{s.division.loss}}</td>
+                      <td>{{s.win.home}}</td>
+                      <td>{{s.loss.home}}</td>
+                      <td>{{s.win.away}}</td>
+                      <td>{{s.loss.away}}</td>
+                      <td>{{s.team.nickname}}</td>
+                   </tr>
+                   
+                </tbody>
+             </table>
+             <br><br>
+             <h1>West Standing Teams</h1>
+             <br><br>
+             <table>
+                <thead class="point-table-head">
+                    <tr>
+                       <th class="text-left">Rank</th>
+                       <th class="text-left">TEAM</th>
+                       <th class="text-center">Conference</th>
+                       <th class="text-center">Win</th>
+                       <th class="text-center">Loss</th>
+                       <th class="text-center">Home win</th>
+                       <th class="text-center">Home loss</th>
+                       <th class="text-center">Away win</th>
+                       <th class="text-center">Away loss</th>
+                       <th class="text-center">Nickname</th>
+                    </tr>
+                 </thead>
+                 <tbody class="text-center">
+                    <tr *ngFor="let s of standingWest | orderBy:'conference.rank'" style="cursor: pointer;" >
+                       <td class="text-left number">{{s.conference.rank}}<i class="fa fa-caret-up" aria-hidden="true"></i></td>
+                       <td class="text-left" >
+                          <img src={{s.team.logo}} ><span [routerLink]="['/teams', s.team.id]">{{s.team.name}}</span>
+                       </td>
+                       <td>{{s.conference.name}}</td>
+                       <td>{{s.division.win}}</td>
+                       <td>{{s.division.loss}}</td>
+                       <td>{{s.win.home}}</td>
+                       <td>{{s.loss.home}}</td>
+                       <td>{{s.win.away}}</td>
+                       <td>{{s.loss.away}}</td>
+                       <td>{{s.team.nickname}}</td>
+                    </tr>
+                    
+                 </tbody>
+    
+             </table>
+          </div>
+       </div>
+    </div>
+    
+ </section>
+<!--<app-teams-per-conference></app-teams-per-conference>-->
